@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Stunning Blog's documentation!
+Welcome to Stunning's developer blog!
 =========================================
 
 Contents:
@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
    
    glesys_setup
+   linux_user
 
 
 Indices and tables
