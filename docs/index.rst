@@ -10,8 +10,10 @@ Here you will find tutorials and code snippets used for developing web and
 smart phone applications.
  
 We use and contribute to open source projects such as WordPress and Django. 
-Check them out at `Stunning <https://github.com/organizations/Stunning>`_ and 
+Check them out at `Stunning <https://github.com/Stunning>`_ and 
 `per42 <https://github.com/per42>`_
+
+Edit this blog by cloning ``git@github.com:Stunning/Blog.git``
 
 Contents:
 
@@ -20,3 +22,5 @@ Contents:
    
    glesys_setup
    linux_user
+
+Edit this blog by cloning git@github.com:Stunning/Blog.git
