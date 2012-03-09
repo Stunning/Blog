@@ -22,5 +22,6 @@ Contents:
    
    glesys_setup
    linux_user
+   database
 
 Edit this blog by cloning git@github.com:Stunning/Blog.git
