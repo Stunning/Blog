@@ -13,6 +13,10 @@ Glesys Setup
 	apt-get install lsof
 	apt-get install python-pip
 
+* Set timezone::
+
+	echo Europe/Stockholm > /etc/timezone 
+
 * customize /etc/nanorc
 
 * Create the WSGI (django) user::
