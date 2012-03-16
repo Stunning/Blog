@@ -81,3 +81,11 @@ Add the line::
 	0 0 * * * (cd backup-db && ./backup.sh >> log 2>&1)
 
 It will be executed at midnight.
+
+
+Restoring from backup
+---------------------
+
+To restore a backup to the database ``bar`` above::
+
+	mysql --user=foo --password='<foo password>' bar < all-databases.sql

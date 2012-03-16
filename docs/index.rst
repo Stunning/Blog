@@ -23,5 +23,6 @@ Contents:
    glesys_setup
    linux_user
    database
+   apache
 
 Edit this blog by cloning git@github.com:Stunning/Blog.git
