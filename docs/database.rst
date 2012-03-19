@@ -57,7 +57,9 @@ Create the backup script::
 
 	nano backup.sh
 	
-with the contents::
+with the contents:
+
+.. code-block:: bash
 
 	#!/bin/bash -xe
 	USER='backup'
