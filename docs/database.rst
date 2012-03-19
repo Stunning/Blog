@@ -11,17 +11,19 @@ Login as root::
 
 	mysql --user=root --password='<root password>'
 
-Create user foo for the database bar::
+Create user ``foo`` for the database ``bar``:
 
-	create database bar;
-	create user foo@localhost identified by '<foo password>';
-	grant all on bar.* to foo@localhost;
+.. code-block:: sql
 
-Create the backup user::
+	CREATE DATABASE bar;
+	GRANT ALL ON bar.* TO 'foo'@'localhost' IDENTIFIED BY '<foo password>';
 
-	create user backup@localhost identified by '<backup password>';
-	grant select, lock tables on *.* to backup@localhost;
-	exit
+Create the ``backup`` user:
+
+.. code-block:: sql
+
+	GRANT SELECT, LOCK TABLES ON *.* TO 'backup'@'localhost' IDENTIFIED BY '<backup password>';
+
 
 
 Create a backup cron job
@@ -57,10 +59,20 @@ Create the backup script::
 	
 with the contents::
 
-	#!/bin/bash -x
-	FILE=all-databases.sql
-	mysqldump --user=backup --password='<backup password>' --all-databases > $FILE
-	git add $FILE $0
+	#!/bin/bash -xe
+	USER='backup'
+	PASS='<backup password>'
+	CRED="--user=$USER --password=$PASS"
+	DBS=$(
+		mysql $CRED --batch --skip-column-names --execute='show databases' |
+		grep -F -v -e 'mysql' -e 'information_schema'
+	)
+	for DB in $DBS; do
+		FILE=$DB.sql
+		mysqldump $CRED --compact --database $DB > $FILE
+		git add $FILE
+	done
+	git add $0
 	git commit -m "Automatic backup"
 	git push origin master
 
