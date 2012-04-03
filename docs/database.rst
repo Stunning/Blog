@@ -34,6 +34,10 @@ these kinds of shared operations. We use *stunning*. You need to add your SSH
 public key to Assembla. If you have one in ~/.ssh/id_rsa.pub, use that one. 
 If not, create it with ``ssh-keygen``. Leave the defaults.
 
+For GIT usage, refer to the `Git Reference`__.
+
+__ http://gitref.org/index.html
+
 If you haven't installed GIT::
 
 	apt-get install git
