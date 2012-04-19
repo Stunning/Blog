@@ -24,5 +24,6 @@ Contents:
    linux_user
    database
    apache
-
+   wordpress_languages
+   
 Edit this blog by cloning git@github.com:Stunning/Blog.git
