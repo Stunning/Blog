@@ -26,12 +26,24 @@ Go to the theme::
 	cd ~/public_html/stunning-ml/wp-content/themes/stunning2
 
 Merge the entries in ``stunning.pot`` into ``sv_SE.po`` without deleting the existing translations, 
-and then translate any new entries. You can use tools such as Gtranslator_ or Virtaal_. 
+and then translate any new entries. You can use tools such as Gtranslator_ or Virtaal_. You can also use the gettext tools.
 
 .. _Gtranslator: http://projects.gnome.org/gtranslator/
 .. _Virtaal: http://translate.sourceforge.net/wiki/virtaal/index
 
-You can also use the gettext tools. If ``sv_SE.po`` does not already exist::
+
+Using Virtaal
+-------------
+
+Open or create ``sv_SE.po`` in Virtaal. Choose **File** -> **Update To Template**, and select ``stunning.pot``. 
+Edit the translations and save it. 
+Finally export it to machine readable format by chooosing **File** -> **Export**, and select ``sv_SE.mo``. 
+
+
+Using gettext
+-------------
+
+If ``sv_SE.po`` does not already exist::
  
 	msginit -i stunning.pot -l sv_SE -o sv_SE.po
 	
