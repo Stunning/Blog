@@ -41,7 +41,6 @@ Edit the translations and save it.
 Finally export it to machine readable format by chooosing **File** |rarr| **Export**, 
 and select ``sv_SE.mo``. 
 
-
 Using gettext
 -------------
 
