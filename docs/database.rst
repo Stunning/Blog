@@ -37,7 +37,7 @@ Create a directory in the user home dir::
 	mkdir backup_db
 	cd backup_db
 
-Setup the local repository according to `version_local`_.
+Setup the local repository according to :ref:`version_local`.
 	
 Create the backup script::
 
