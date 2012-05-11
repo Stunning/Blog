@@ -12,7 +12,7 @@ If you have one in ~/.ssh/id_rsa.pub, use that one.
 If not, create it with ``ssh-keygen``. Leave the defaults.
 
 Git comes with both a command line interface (cli) - ``git``, and a graphical user interface (gui) - ``git-gui``. 
-They and other gui clients can be downloaded from <http://git-scm.com/downloads>. 
+They and other gui clients can be downloaded `here <http://git-scm.com/downloads>`_. 
 Eclipse can use the plugin egit. 
 
 GIT cli
