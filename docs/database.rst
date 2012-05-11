@@ -29,7 +29,7 @@ Create the ``backup`` user:
 Create a backup cron job
 ------------------------
 
-Setup a remote GIT repository. We use Assembla. To setup your own, see `Set up a your own remote repository`_. 
+Setup a remote GIT repository. We use Assembla. To setup your own, see :ref:`version_own_remote`. 
 Use an account dedicated to these kinds of shared operations. We use ``stunning``. 
 
 Create a directory in the user home dir::
@@ -37,7 +37,7 @@ Create a directory in the user home dir::
 	mkdir backup_db
 	cd backup_db
 
-Setup the local repository according to `Setup a local repository`_.
+Setup the local repository according to `version_local`_.
 	
 Create the backup script::
 

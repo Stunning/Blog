@@ -35,6 +35,10 @@ and then translate any new entries. You can use tools such as Gtranslator_ or Vi
 Using Virtaal
 -------------
 
+Added isonum
+
+.. include:: <isonum.txt>
+
 Open or create ``sv_SE.po`` in Virtaal. Choose **File** |rarr| **Update To Template**, 
 and select ``stunning.pot``. 
 Edit the translations and save it. 

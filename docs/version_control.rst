@@ -1,6 +1,7 @@
 Version control
 ===============
 
+.. _version_local:
 
 Setup a local repository
 ------------------------
@@ -15,7 +16,7 @@ They and other gui clients can be downloaded from <http://git-scm.com/downloads>
 Eclipse can use the plugin egit. 
 
 GIT cli
-~~~~~~~
+^^^^^^^
 
 Learn the basics at `Git Reference`_. See also `GIT documentation`_.
 
@@ -43,6 +44,8 @@ Where <repository url> can be for instance:
 - ``git@git.assembla.com:<Assembla repository name>.git``
 - ``git@stunning-apps.com:bilia/nostalgi.git``
 
+
+.. _version_own_remote:
 
 Set up a your own remote repository
 -----------------------------------
