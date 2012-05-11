@@ -3,6 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+=========================
+Stunning's developer blog
+=========================
+
 Welcome to Stunning's developer blog!
 =====================================
 
@@ -22,6 +26,7 @@ Contents:
    
    glesys_setup
    linux_user
+   version_control
    database
    apache
    wordpress_languages

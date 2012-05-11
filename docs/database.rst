@@ -29,33 +29,15 @@ Create the ``backup`` user:
 Create a backup cron job
 ------------------------
 
-Setup a remote GIT repository. We use Assembla. Use an account dedicated to 
-these kinds of shared operations. We use *stunning*. You need to add your SSH 
-public key to Assembla. If you have one in ~/.ssh/id_rsa.pub, use that one. 
-If not, create it with ``ssh-keygen``. Leave the defaults.
-
-For GIT usage, refer to the `Git Reference`__.
-
-__ http://gitref.org/index.html
-
-If you haven't installed GIT::
-
-	apt-get install git
-	
-If you haven't set up the GIT user (stored in ~/.gitconfig)::
-
-	git config --global user.name <some name>
-	git config --global user.email <some email>
+Setup a remote GIT repository. We use Assembla. To setup your own, see `Set up a your own remote repository`_. 
+Use an account dedicated to these kinds of shared operations. We use ``stunning``. 
 
 Create a directory in the user home dir::
 
 	mkdir backup_db
 	cd backup_db
 
-Initialize the GIT repository::
-
-	git init
-	git remote add origin git@git.assembla.com:<Assembla repository name>.git
+Setup the local repository according to `Setup a local repository`_.
 	
 Create the backup script::
 
