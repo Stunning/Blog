@@ -28,7 +28,7 @@ Creating translatable strings
 
 Wrap the text in functions of the ``django.utils.translation`` module, such as 
 ``ugettext`` or ``ugettext_lazy``. It is convenient and standard to alias the
-function used to ``_u``. For example::
+function used to ``_u``. For example:
 
 .. code-block:: python
 
@@ -41,10 +41,14 @@ Unicode text in source files
 ----------------------------
 
 To create unicode text strings, for instance with Swedish content, you need to 
-define the encoding of the source file, and store it in a unicode string::
+define the encoding of the source file, and store it in a unicode string:
 
 .. code-block:: python
 
 	# -*- coding: utf-8 -*-
 	
 	text = u"En björn åt ett bär"
+
+
+
+.. _Virtaal: http://translate.sourceforge.net/wiki/virtaal/index
