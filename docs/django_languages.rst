@@ -28,7 +28,7 @@ Creating translatable strings
 
 Wrap the text in functions of the ``django.utils.translation`` module, such as 
 ``ugettext`` or ``ugettext_lazy``. It is convenient and standard to alias the
-function used to ``_u``. For example:
+function used to ``_``. For example:
 
 .. code-block:: python
 
