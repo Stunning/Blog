@@ -30,5 +30,6 @@ Contents:
    database
    apache
    wordpress_languages
+   django_languages
    
 Edit this blog by cloning git@github.com:Stunning/Blog.git
