@@ -24,7 +24,7 @@ or create a request to get a cert from a Certificate Authority::
 
 	openssl req -new -key stunning.se-key.pem -out stunning.se-startcom-request.csr
 
-Enable the TLS module:
+Enable the TLS module::
 
 	ln -s ../mods-available/ssl.* /etc/apache2/mods-enabled/
 	
