@@ -23,3 +23,7 @@ Glesys Setup
 	
 	set autoindent
 	set tabsize 4
+
+* set default language in /etc/bash.bashrc::
+
+	export LANG=en_US
