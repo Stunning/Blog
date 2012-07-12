@@ -24,12 +24,14 @@ and enter the url of the site below.
 
 Site:
 
-	- `Juno <http://download.eclipse.org/releases/juno>` (or whatever version is current):
+- Juno_ (or whatever version is current):
 		
-		* EGit
+* EGit
 	
-	- `PyDev <http://pydev.org/updates/>`:
+- PyDev_:
 	
-		* Pydev
+* Pydev
 	
 .. _Eclipse Downloads: http://download.eclipse.org/eclipse/downloads/
+.. _Juno: http://download.eclipse.org/releases/juno
+.. _PyDev: http://pydev.org/updates/
