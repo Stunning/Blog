@@ -22,13 +22,13 @@ Start Eclipse, and go to **Help** |rarr| **Install New Software...**.
 If the update site is not listed in *Work with*, click **Add...**, 
 and enter the url of the site below.
 
-Site::
+Site:
 
-	- `Juno <http://download.eclipse.org/releases/juno>` (or whatever version is current)::
+	- `Juno <http://download.eclipse.org/releases/juno>` (or whatever version is current):
 		
 		* EGit
 	
-	- `PyDev <http://pydev.org/updates/>`::
+	- `PyDev <http://pydev.org/updates/>`:
 	
 		* Pydev
 	
