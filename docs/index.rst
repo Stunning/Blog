@@ -31,5 +31,6 @@ Contents:
    apache
    wordpress_languages
    django_languages
+   ide
    
 Edit this blog by cloning git@github.com:Stunning/Blog.git
