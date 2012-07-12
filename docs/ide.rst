@@ -26,12 +26,18 @@ Site:
 
 - Juno_ (or whatever version is current):
 		
-* EGit
+  - EGit
 	
 - PyDev_:
 	
-* Pydev
-	
+  - PyDev
+
+- Google_:
+
+  - Google Plugin for Eclipse 4.2
+  - Google App Engine Java SDK
+  
 .. _Eclipse Downloads: http://download.eclipse.org/eclipse/downloads/
 .. _Juno: http://download.eclipse.org/releases/juno
 .. _PyDev: http://pydev.org/updates/
+.. _Google: http://dl.google.com/eclipse/plugin/4.2
