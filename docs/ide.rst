@@ -25,9 +25,15 @@ and enter the url of the site below.
 Site:
 
 - Juno_ (or whatever version is current):
-		
   - EGit
-	
+  - Subversive SVN Team Provider
+  - Eclipse Web Developer Tools
+  - JavaScript Development Tools
+  - Eclipse XML Editors and Tools
+  - Eclipse XSL Developer Tools
+  - PHP Development Tools (PDT) SDK Feature
+  - Remote System Explorer End-User Runtime
+  
 - PyDev_:
 	
   - PyDev
