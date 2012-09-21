@@ -134,3 +134,78 @@ This will permanently redirect any URL path that starts with the prefix
 ``/`` (which all URL paths do) to the canonical domain. The rest of the URL path after the 
 ``/`` prefix will be added to the target URL prefix 
 ``http://www.stunning-apps.com/``. 
+
+
+Collect statistics
+------------------
+
+You can use awstats_ to collect statistics from the access log. View it on stunning-apps_.
+
+Install awstats::
+
+   apt-get install awstats
+
+You find the debian documentation here::
+
+   gunzip < /usr/share/doc/awstats/README.Debian.gz | less
+
+Edit ``/etc/awstats/awstats.conf.local``::
+
+   LogFile="/var/log/apache2/other_vhosts_access.log"
+   LogFormat=1
+   SiteDomain="awstats.stunning-apps.com"
+   HostAliases="awstats.stunning-apps.com"
+   DNSLookup=0
+   AllowToUpdateStatsFromBrowser=1
+   
+Create a virtual host for awstats in ``/etc/apache2/sites-available/awstats``::
+
+   <VirtualHost 109.74.6.41:80>
+        ServerName awstats.stunning-apps.com
+        Include /usr/share/doc/awstats/examples/apache.conf
+   </VirtualHost>
+
+Enable it by softlinking ``/etc/apache2/sites-enabled/awstats -> ../sites-available/awstats``.
+
+Make logfiles readable by ``www-data``::
+
+   chmod o+x /var/log/apache2
+   chmod o+r /var/log/apache2/*.log
+
+Config **logrotate** to make log files readeble, and to update statistics data.
+In ``/etc/logrotate.d/apache2``, edit ``create`` line permission to read::
+
+   create 644 root adm
+
+And add this ``prerotate``::
+
+   prerotate
+   if [ -x /usr/share/awstats/tools/update.sh ]; then
+      su - -c /usr/share/awstats/tools/update.sh www-data
+   fi
+   endscript
+
+So that the result becomes::
+
+   /var/log/apache2/*.log {
+      weekly
+      missingok
+      rotate 52
+      compress
+      delaycompress
+      notifempty
+      create 644 root adm
+      sharedscripts
+      prerotate
+      if [ -x /usr/share/awstats/tools/update.sh ]; then
+         su - -c /usr/share/awstats/tools/update.sh www-data
+      fi
+      endscript
+      postrotate
+         /etc/init.d/apache2 reload > /dev/null
+      endscript
+   }
+
+
+.. _awstats: http://awstats.sourceforge.net/
+.. _stunning-apps: http://awstats.stunning-apps.com/cgi-bin/awstats.pl 
