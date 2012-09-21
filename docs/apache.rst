@@ -152,12 +152,23 @@ You find the debian documentation here::
 Edit ``/etc/awstats/awstats.conf.local``::
 
    LogFile="/var/log/apache2/other_vhosts_access.log"
-   LogFormat=1
+   LogFormat="%virtualname %host %other %logname %time1 %methodurl %code %bytesd %refererquot %uaquot"
    SiteDomain="awstats.stunning-apps.com"
-   HostAliases="awstats.stunning-apps.com"
+   HostAliases="REGEX[.*]"
    DNSLookup=0
    AllowToUpdateStatsFromBrowser=1
    
+   ExtraSectionName1="Virtual Hosts"
+   ExtraSectionCodeFilter1="200 304"
+   ExtraSectionFirstColumnTitle1="Virtual Host"
+   ExtraSectionFirstColumnValues1="VHOST,(.*)"
+   ExtraSectionFirstColumnFormat1="%s"
+   ExtraSectionStatTypes1=UVPHB
+   ExtraSectionAddAverageRow1=0
+   ExtraSectionAddSumRow1=1
+   MaxNbOfExtra1=20
+   MinHitExtra1=1
+
 Create a virtual host for awstats in ``/etc/apache2/sites-available/awstats``::
 
    <VirtualHost 109.74.6.41:80>
